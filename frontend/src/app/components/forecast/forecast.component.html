@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <h1>Forecast for</h1>
+  <input
+    type="text"
+    [(ngModel)]="location"
+    placeholder="Enter a location..."
+  /><br />
+  <input type="radio" id="3days" name="days" value="3" [(ngModel)]="days" />
+  <label for="html">3 Days</label><br />
+  <input type="radio" id="7days" name="days" value="7" [(ngModel)]="days" />
+  <label for="css">7 Days</label><br />
+
+  <button (click)="getWeather()">Find</button>
+
+  <div>{{ forecast.location.name }}</div>
+  <!-- <div>{{ forecast.location.name }}</div> -->
+</div>
